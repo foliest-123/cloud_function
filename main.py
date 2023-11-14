@@ -1,6 +1,9 @@
 from pathlib import Path
 from google.cloud import storage
 
+
+bucket_name = "json_file_folder"
+source_folder = r"./json_data"
 def upload_files_to_gcs(bucket_name, source_folder):
     storage_client = storage.Client()
     bucket = storage_client.get_bucket(bucket_name)
@@ -17,7 +20,5 @@ def upload_files_to_gcs(bucket_name, source_folder):
         print(f"{filename} uploaded to blob as {destination_blob_name}.")
 
 
-bucket_name = "json_file_folder"
-source_folder = r"./json_data"
-upload_files_to_gcs(bucket_name, source_folder)
+
 
