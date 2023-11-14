@@ -2,7 +2,7 @@ from pathlib import Path
 from google.cloud import storage
 
 
-def upload_files_to_gcs():
+def upload_files_to_gcs(request):
     
     bucket_name = "json_file_folder"
     source_folder = r"./json_data"
